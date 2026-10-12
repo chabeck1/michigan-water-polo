@@ -1,11 +1,11 @@
 /* Join page: practice info, FAQ and the athlete form. */
 
 import { findAsset } from '../assets.js';
-import { MONTHS, SITE } from '../config.js';
+import { SITE } from '../config.js';
 import { TODAY } from '../dates.js';
 import { practiceShort } from '../shared.js';
 import { DATA, state } from '../store.js';
-import { esc, pad2 } from '../util.js';
+import { esc } from '../util.js';
 
 export function pageJoin() {
   var a = DATA.about;
@@ -41,23 +41,21 @@ export function pageJoin() {
   }).join('') + '</div></div>';
 
   html += '<div class="panel-navy on-navy" id="join-panel"><div class="form-wrap">' +
-    '<h3>Interested?</h3><p class="sub">Leave your info and an officer will reach out about the next practice. Fields marked <span class="req">*</span> are required.</p>' +
+    '<h3>Interested?</h3><p class="sub">Takes a minute. An officer will reach out about the next practice; no experience needed.</p>' +
     '<form class="form" id="athlete-form" novalidate>' +
     field('a-name', 'Full name', true, '<input class="input" id="a-name" name="name" autocomplete="name" placeholder="Name">', 'full') +
     field('a-email', 'Email', true, '<input class="input" id="a-email" name="email" type="email" autocomplete="email" placeholder="uniqname@umich.edu">') +
     field('a-phone', 'Phone', true, '<input class="input" id="a-phone" name="phone" type="tel" autocomplete="tel" placeholder="(734) 555-0123">') +
-    '<div class="field" data-f="grad"><span class="flabel" id="l-grad">Expected graduation<span class="req">*</span></span><div class="pair">' +
-    '<select class="input" name="gradMonth" aria-labelledby="l-grad" aria-label="Graduation month"><option value="">Month</option>' + MONTHS.map(function (m, i) { return '<option value="' + pad2(i + 1) + '">' + m + '</option>'; }).join('') + '</select>' +
-    '<select class="input" name="gradYear" aria-label="Graduation year"><option value="">Year</option>' + gradYears.map(function (yv) { return '<option>' + yv + '</option>'; }).join('') + '</select>' +
-    '</div><span class="err" aria-live="polite"></span></div>' +
-    field('a-degree', 'Expected degree', true, '<input class="input" id="a-degree" name="degree" placeholder="BS in Economics">') +
-    field('a-free', '100 yard free time', true, '<input class="input" id="a-free" name="free" inputmode="decimal" placeholder="58.40">') +
-    field('a-exp', 'Years of water polo', true, '<input class="input" id="a-exp" name="experience" inputmode="numeric" placeholder="0 is fine">') +
-    field('a-hand', 'Dominant hand', true, '<select class="input" id="a-hand" name="hand"><option value="">Choose</option><option value="right">Right</option><option value="left">Left</option><option value="ambidextrous">Ambidextrous</option></select>') +
-    '<div class="field full" data-f="positions"><span class="flabel" id="l-pos">Position<span class="req">*</span></span><div class="pos-chips" role="group" aria-labelledby="l-pos">' +
+    field('a-grad', 'Graduation year', true, '<select class="input" id="a-grad" name="gradYear"><option value="">Choose</option>' + gradYears.map(function (yv) { return '<option>' + yv + '</option>'; }).join('') + '</select>') +
+    field('a-exp', 'Water polo experience', true, '<select class="input" id="a-exp" name="experience"><option value="">Choose</option>' +
+      ['New to it', '1–2 years', '3–4 years', '5+ years'].map(function (x) { return '<option>' + x + '</option>'; }).join('') + '</select>') +
+    field('a-hand', 'Dominant hand', true, '<select class="input" id="a-hand" name="hand"><option value="">Choose</option><option value="right">Right</option><option value="left">Left</option><option value="ambidextrous">Both</option></select>') +
+    '<details><summary>Add more about you (optional)</summary><div class="inner">' +
+    '<div class="field full" data-f="positions"><span class="flabel" id="l-pos">Position</span><div class="pos-chips" role="group" aria-labelledby="l-pos">' +
     SITE.positions.map(function (p) { return '<button type="button" data-act="pos" data-val="' + p[0] + '" aria-pressed="false">' + p[0] + (p[1] ? '<small>' + p[1] + '</small>' : '') + '</button>'; }).join('') +
-    '</div><span class="err" aria-live="polite"></span></div>' +
-    '<details><summary>More about you (optional)</summary><div class="inner">' +
+    '</div></div>' +
+    field('a-free', '100 yard free time', false, '<input class="input" id="a-free" name="free" inputmode="decimal" placeholder="58.40">') +
+    field('a-degree', 'Major', false, '<input class="input" id="a-degree" name="degree" placeholder="Economics">') +
     field('a-city', 'Hometown city', false, '<input class="input" id="a-city" name="city" autocomplete="address-level2">') +
     field('a-state', 'Hometown state', false, '<input class="input" id="a-state" name="state" autocomplete="address-level1">') +
     field('a-teams', 'Teams you\'ve played for', false, '<textarea class="input" id="a-teams" name="teams" rows="3" placeholder="Pioneer High School"></textarea>', 'full') +

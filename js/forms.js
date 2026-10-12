@@ -53,7 +53,6 @@ export function bindAthleteForm() {
       if (i >= 0) positions.splice(i, 1); else positions.push(v);
     }
     $$('[data-act="pos"]', form).forEach(function (x) { x.setAttribute('aria-pressed', positions.indexOf(x.dataset.val) >= 0 ? 'true' : 'false'); });
-    if (form.dataset.tried) setErr(form, 'positions', positions.length ? '' : 'Pick at least one, or Unsure.');
   });
   function check() {
     var errs = {};
@@ -62,13 +61,10 @@ export function bindAthleteForm() {
     if (!em) errs['a-email'] = 'Email is required.'; else if (!validEmail(em)) errs['a-email'] = 'That email doesn\'t look right.';
     var ph = val(form, 'phone');
     if (!ph) errs['a-phone'] = 'Phone is required.'; else if (!validPhone(ph)) errs['a-phone'] = 'Enter a 10-digit phone number.';
-    if (!val(form, 'gradMonth') || !val(form, 'gradYear')) errs.grad = 'Pick a month and year.';
-    if (!val(form, 'degree')) errs['a-degree'] = 'Expected degree is required.';
-    if (!val(form, 'free')) errs['a-free'] = '100 free time is required.';
-    if (!val(form, 'experience')) errs['a-exp'] = 'Years of experience is required.';
-    if (!val(form, 'hand')) errs['a-hand'] = 'Dominant hand is required.';
-    if (!positions.length) errs.positions = 'Pick at least one, or Unsure.';
-    ['a-name', 'a-email', 'a-phone', 'grad', 'a-degree', 'a-free', 'a-exp', 'a-hand', 'positions'].forEach(function (k) { setErr(form, k, errs[k]); });
+    if (!val(form, 'gradYear')) errs['a-grad'] = 'Pick your graduation year.';
+    if (!val(form, 'experience')) errs['a-exp'] = 'Pick one; new is fine.';
+    if (!val(form, 'hand')) errs['a-hand'] = 'Pick one.';
+    ['a-name', 'a-email', 'a-phone', 'a-grad', 'a-exp', 'a-hand'].forEach(function (k) { setErr(form, k, errs[k]); });
     return errs;
   }
   form.addEventListener('input', function () { if (form.dataset.tried) check(); });
@@ -88,9 +84,10 @@ export function bindAthleteForm() {
     msg.hidden = true;
     var F = SITE.forms.athlete.entry, p = {};
     p[F.name] = val(form, 'name'); p[F.email] = val(form, 'email'); p[F.phone] = phoneOut(val(form, 'phone'));
-    p[F.city] = val(form, 'city'); p[F.state] = val(form, 'state'); p[F.grad] = val(form, 'gradMonth') + '/' + val(form, 'gradYear');
-    p[F.degree] = val(form, 'degree'); p[F.free] = val(form, 'free'); p[F.experience] = val(form, 'experience');
-    p[F.hand] = val(form, 'hand'); p[F.position] = positions.join(','); p[F.teams] = val(form, 'teams');
+    // The Google Form requires degree, 100 free and position; the site makes them optional, so blanks are sent as "Not given".
+    p[F.city] = val(form, 'city'); p[F.state] = val(form, 'state'); p[F.grad] = val(form, 'gradYear');
+    p[F.degree] = val(form, 'degree') || 'Not given'; p[F.free] = val(form, 'free') || 'Not given'; p[F.experience] = val(form, 'experience');
+    p[F.hand] = val(form, 'hand'); p[F.position] = positions.length ? positions.join(',') : 'Unsure'; p[F.teams] = val(form, 'teams');
     p[F.awards] = val(form, 'awards'); p[F.info] = val(form, 'info');
     var btn = $('.submit', form); btn.disabled = true; btn.textContent = 'Sending…';
     submitTo(SITE.forms.athlete.url, p).then(function () {
