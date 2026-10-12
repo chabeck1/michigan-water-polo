@@ -10,8 +10,8 @@
 .ev-name { margin: 6px 0 4px; font-family: var(--cond); font-weight: 800; font-size: 34px; line-height: 1; color: var(--navy); text-transform: uppercase; }
 .ev-loc { font-size: 15px; color: var(--muted); }
 .ev-side { display: flex; flex-direction: column; align-items: flex-end; gap: 8px; }
-.ev-box { font-family: var(--cond); font-weight: 800; font-size: 28px; color: var(--navy); padding: 4px 12px; border: 1.5px solid var(--navy); white-space: nowrap; font-variant-numeric: tabular-nums; }
-.ev-box .sq { display: inline-block; vertical-align: middle; font-family: var(--mono); font-weight: 500; font-size: 10px; letter-spacing: 0.08em; line-height: 1; padding: 4px 5px 3px; margin-right: 6px; background: var(--slate-light); color: var(--navy); }
+.ev-box { display: inline-flex; align-items: center; line-height: 1; font-family: var(--cond); font-weight: 800; font-size: 28px; color: var(--navy); padding: 7px 12px; border: 1.5px solid var(--navy); white-space: nowrap; font-variant-numeric: tabular-nums; }
+.ev-box .sq { font-family: var(--mono); font-weight: 500; font-size: 10px; letter-spacing: 0.08em; line-height: 1; padding: 4px 5px 3px; margin-right: 6px; background: var(--slate-light); color: var(--navy); }
 .ev-box .sq-a { background: var(--navy); color: var(--maize); }
 .ev-box .sep { color: var(--rule); margin: 0 8px; font-weight: 400; }
 .ev-pending { font-size: 15px; color: var(--muted); }

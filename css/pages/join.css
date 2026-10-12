@@ -1,6 +1,6 @@
 /* Join page */
 
-.join-hero .wrap { padding-block: 80px 64px; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr)); gap: 40px; align-items: end; }
+.join-hero .wrap { padding-block: 80px 64px; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr)); gap: 40px; align-items: center; }
 .join-hero h1 { margin-top: 12px; font-size: clamp(60px, 9vw, 128px); line-height: 0.84; }
 .join-hero p { max-width: 540px; margin: 28px 0 0; font-size: 19px; line-height: 1.5; }
 .join-photo { margin: 0; aspect-ratio: 3 / 2; overflow: hidden; background: var(--gold); }

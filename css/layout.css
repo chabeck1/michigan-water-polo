@@ -56,7 +56,7 @@
 }
 
 /* ---------- announcement (banner.json) ---------- */
-.announce { background: var(--maize); color: var(--navy); }
+.announce { background: var(--maize); color: var(--navy); border-bottom: 1px solid rgba(0, 39, 76, 0.15); }
 .announce .wrap { display: flex; align-items: center; gap: 12px 20px; padding-block: 12px; flex-wrap: wrap; }
 .announce a { color: var(--navy); font-family: var(--cond); font-weight: 700; font-size: 20px; text-decoration: none; }
 .announce a span { font-family: var(--sans); font-weight: 500; font-size: 15px; margin-left: 10px; text-decoration: underline; text-underline-offset: 3px; }
