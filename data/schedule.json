@@ -131,7 +131,8 @@
             {
               "opponent": "Notre Dame",
               "time": "2026-10-11T18:20",
-              "logo": "/NotreDame.svg"
+              "logo": "/NotreDame.svg",
+              "result": "win"
             }
           ]
         },
