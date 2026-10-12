@@ -50,7 +50,6 @@ content:
     fields:
       - name: seasons
         label: Seasons
-        description: One entry per year and team. Open a season, then a tournament, to add games and scores.
         type: object
         required: true
         list:
@@ -69,7 +68,7 @@ content:
             label: Team
             type: select
             required: true
-            description: Use A for a season with only one team.
+            description: Each year has one entry per team. Use A for a season with only one team.
             options:
               values: [A, B]
           - name: tournaments
@@ -118,7 +117,7 @@ content:
                     type: string
                     required: true
                     default: TBA
-                    description: Leave TBA if you don't know yet. To remove a game, use its delete button; a game with every box empty can't be saved.
+                    description: Leave TBA if it isn't known yet.
                   - name: time
                     label: Start time
                     type: date
@@ -168,7 +167,6 @@ content:
     fields:
       - name: seasons
         label: Seasons
-        description: One entry per year. The site shows the newest season first.
         type: object
         required: true
         list:
@@ -242,7 +240,6 @@ content:
     fields:
       - name: news
         label: Posts
-        description: New posts can go anywhere in the list; the site sorts them by date.
         type: object
         required: true
         list:
@@ -258,6 +255,7 @@ content:
             label: Date
             type: date
             required: true
+            description: The site sorts posts by this date.
             default: ""
             options:
               format: "MMMM do, yyyy"
@@ -329,7 +327,6 @@ content:
     fields:
       - name: seasons
         label: Seasons
-        description: Shown on the schedule page under each season.
         type: object
         required: true
         list:
@@ -403,7 +400,6 @@ content:
             list: true
       - name: links
         label: Club links
-        description: Shown in the footer and on the contact page.
         type: object
         required: true
         list:
@@ -453,7 +449,6 @@ content:
                   media: headshots
       - name: eboard
         label: Exec board
-        description: The site shows each role with its people's names.
         type: object
         required: true
         list:
@@ -514,7 +509,6 @@ content:
         description: Shown at the top of the Alumni page, like 60+.
       - name: companies
         label: Companies
-        description: The scrolling list on the Alumni page, in this order.
         type: object
         required: true
         list:
