@@ -1,0 +1,475 @@
+{
+  "seasons": [
+    {
+      "year": 2022,
+      "awards": [
+        {
+          "name": "Team MVP",
+          "recipients": [
+            "Jeff Brill"
+          ]
+        },
+        {
+          "name": "Team Most Improved",
+          "recipients": [
+            "Brenden Saur"
+          ]
+        },
+        {
+          "name": "Team Most Dedicated",
+          "recipients": [
+            "Sean Underwood"
+          ]
+        }
+      ]
+    },
+    {
+      "year": 2021,
+      "awards": [
+        {
+          "name": "Team MVP",
+          "recipients": [
+            "Sid Murthy"
+          ]
+        },
+        {
+          "name": "Team Most Improved",
+          "recipients": [
+            "Sean Underwood",
+            "Cliff Amadeo"
+          ]
+        },
+        {
+          "name": "Team Rookie of the Year",
+          "recipients": [
+            "Luke Jacobson"
+          ]
+        },
+        {
+          "name": "Team Most Dedicated",
+          "recipients": [
+            "Brendan Chang"
+          ]
+        }
+      ]
+    },
+    {
+      "year": 2019,
+      "awards": [
+        {
+          "name": "Team MVP",
+          "recipients": [
+            "Nolan Vaughn"
+          ]
+        },
+        {
+          "name": "Team Most Improved",
+          "recipients": [
+            "Matthew Ferrari"
+          ]
+        },
+        {
+          "name": "Team Rookie of the Year",
+          "recipients": [
+            "Zach Burns"
+          ]
+        },
+        {
+          "name": "Team Most Dedicated",
+          "recipients": [
+            "Andrew Golin"
+          ]
+        }
+      ]
+    },
+    {
+      "year": 2018,
+      "awards": [
+        {
+          "name": "Team MVP",
+          "recipients": [
+            "David Newberger"
+          ]
+        },
+        {
+          "name": "Team Most Improved",
+          "recipients": [
+            "Seth Wisotsky"
+          ]
+        },
+        {
+          "name": "Team Rookie of the Year",
+          "recipients": [
+            "Sid Murthy"
+          ]
+        },
+        {
+          "name": "First Team Big Ten",
+          "recipients": [
+            "Scott Fordham",
+            "Sid Murthy",
+            "Nolan Vaughn"
+          ]
+        },
+        {
+          "name": "Second Team Big Ten",
+          "recipients": [
+            "Tom McLeod",
+            "Ilya Kovalenko"
+          ]
+        },
+        {
+          "name": "Big Ten Conference MVP",
+          "recipients": [
+            "Scott Fordham"
+          ]
+        },
+        {
+          "name": "First Team All-American",
+          "recipients": [
+            "Scott Fordham"
+          ]
+        },
+        {
+          "name": "Honorable Mention All-American",
+          "recipients": [
+            "Ilya Kovalenko"
+          ]
+        }
+      ]
+    },
+    {
+      "year": 2017,
+      "awards": [
+        {
+          "name": "Team MVP",
+          "recipients": [
+            "Daniel Wu"
+          ]
+        },
+        {
+          "name": "Team Most Improved",
+          "recipients": [
+            "Connor Hallman"
+          ]
+        },
+        {
+          "name": "Team Rookie of the Year",
+          "recipients": [
+            "Scott Fordham"
+          ]
+        },
+        {
+          "name": "First Team Big Ten",
+          "recipients": [
+            "Daniel Wu",
+            "David Newberger",
+            "Scott Fordham"
+          ]
+        },
+        {
+          "name": "Second Team Big Ten",
+          "recipients": [
+            "Alexander Weiss",
+            "Ilya Kovalenko",
+            "Nolan Vaughn"
+          ]
+        },
+        {
+          "name": "Big Ten Conference MVP",
+          "recipients": [
+            "Daniel Wu"
+          ]
+        },
+        {
+          "name": "First Team All-American",
+          "recipients": [
+            "Daniel Wu"
+          ]
+        },
+        {
+          "name": "Second Team All-American",
+          "recipients": [
+            "David Newberger"
+          ]
+        }
+      ]
+    },
+    {
+      "year": 2016,
+      "awards": [
+        {
+          "name": "Team MVP",
+          "recipients": [
+            "Davis Argersinger"
+          ]
+        },
+        {
+          "name": "Team Most Improved",
+          "recipients": [
+            "Zach Gan"
+          ]
+        },
+        {
+          "name": "Team Rookie of the Year",
+          "recipients": [
+            "Charles Schertzing"
+          ]
+        },
+        {
+          "name": "First Team Big Ten",
+          "recipients": [
+            "Daniel Wu",
+            "Davis Argersinger"
+          ]
+        },
+        {
+          "name": "Second Team Big Ten",
+          "recipients": [
+            "David Newberger",
+            "Dennis Dahlmann"
+          ]
+        },
+        {
+          "name": "Big Ten Conference MVP",
+          "recipients": [
+            "Davis Argersinger"
+          ]
+        },
+        {
+          "name": "First Team All-American",
+          "recipients": [
+            "Daniel Wu",
+            "Davis Argersinger"
+          ]
+        },
+        {
+          "name": "Honorable Mention All-American",
+          "recipients": [
+            "David Newberger"
+          ]
+        }
+      ]
+    },
+    {
+      "year": 2015,
+      "awards": [
+        {
+          "name": "Team MVP",
+          "recipients": [
+            "Daniel Wu"
+          ]
+        },
+        {
+          "name": "Team Most Improved",
+          "recipients": [
+            "Nick Yoo"
+          ]
+        },
+        {
+          "name": "Team Rookie of the Year",
+          "recipients": [
+            "David Newberger"
+          ]
+        },
+        {
+          "name": "First Team Big Ten",
+          "recipients": [
+            "Daniel Wu",
+            "Davis Argersinger"
+          ]
+        },
+        {
+          "name": "Second Team Big Ten",
+          "recipients": [
+            "David Newberger",
+            "Seiji Osawa",
+            "Tom McLeod"
+          ]
+        },
+        {
+          "name": "Second Team All-American",
+          "recipients": [
+            "Davis Argersinger"
+          ]
+        },
+        {
+          "name": "Honorable Mention All-American",
+          "recipients": [
+            "Daniel Wu",
+            "David Newberger",
+            "Seiji Osawa"
+          ]
+        }
+      ]
+    },
+    {
+      "year": 2014,
+      "awards": [
+        {
+          "name": "First Team Big Ten",
+          "recipients": [
+            "Daniel Wu"
+          ]
+        },
+        {
+          "name": "Second Team Big Ten",
+          "recipients": [
+            "Davis Argersinger",
+            "Ryan Scannell",
+            "Seiji Osawa"
+          ]
+        },
+        {
+          "name": "Honorable Mention All-American",
+          "recipients": [
+            "Daniel Wu"
+          ]
+        }
+      ]
+    },
+    {
+      "year": 2013,
+      "awards": [
+        {
+          "name": "First Team Big Ten",
+          "recipients": [
+            "Seiji Osawa"
+          ]
+        },
+        {
+          "name": "Second Team Big Ten",
+          "recipients": [
+            "Chris Takahashi",
+            "Nick Naruns",
+            "Grant Cole"
+          ]
+        },
+        {
+          "name": "Honorable Mention All-American",
+          "recipients": [
+            "Seiji Osawa"
+          ]
+        }
+      ]
+    },
+    {
+      "year": 2012,
+      "awards": [
+        {
+          "name": "First Team Big Ten",
+          "recipients": [
+            "Seiji Osawa",
+            "Nick Naruns"
+          ]
+        },
+        {
+          "name": "Second Team Big Ten",
+          "recipients": [
+            "Chris Takahashi"
+          ]
+        },
+        {
+          "name": "Honorable Mention All-American",
+          "recipients": [
+            "Seiji Osawa",
+            "Nick Naruns",
+            "Chris Takahashi"
+          ]
+        }
+      ]
+    },
+    {
+      "year": 2011,
+      "awards": [
+        {
+          "name": "First Team Big Ten",
+          "recipients": [
+            "Matt Woelfel",
+            "Chris Takahashi"
+          ]
+        },
+        {
+          "name": "Second Team Big Ten",
+          "recipients": [
+            "Peter DeJonge",
+            "Ben Hubbard"
+          ]
+        },
+        {
+          "name": "Big Ten Conference MVP",
+          "recipients": [
+            "Matt Woelfel"
+          ]
+        },
+        {
+          "name": "Second Team All-American",
+          "recipients": [
+            "Matt Woelfel"
+          ]
+        }
+      ]
+    },
+    {
+      "year": 2010,
+      "awards": [
+        {
+          "name": "First Team Big Ten",
+          "recipients": [
+            "Sam Hoekstra",
+            "Levi Barry"
+          ]
+        },
+        {
+          "name": "Second Team Big Ten",
+          "recipients": [
+            "Matt Woelfel"
+          ]
+        },
+        {
+          "name": "Big Ten Conference MVP",
+          "recipients": [
+            "Nick Mansfield"
+          ]
+        },
+        {
+          "name": "First Team All-American",
+          "recipients": [
+            "Sam Hoekstra",
+            "Levi Barry"
+          ]
+        },
+        {
+          "name": "Honorable Mention All-American",
+          "recipients": [
+            "Nick Mansfield"
+          ]
+        }
+      ]
+    },
+    {
+      "year": 2009,
+      "awards": [
+        {
+          "name": "First Team Big Ten",
+          "recipients": [
+            "Matt Woelfel",
+            "Ryan Pryor"
+          ]
+        },
+        {
+          "name": "Second Team Big Ten",
+          "recipients": [
+            "Nick Mansfield"
+          ]
+        },
+        {
+          "name": "Honorable Mention All-American",
+          "recipients": [
+            "Ryan Pryor"
+          ]
+        }
+      ]
+    }
+  ]
+}

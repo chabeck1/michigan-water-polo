@@ -1,0 +1,101 @@
+{
+  "count": "60+",
+  "companies": [
+    {
+      "name": "Amazon",
+      "logo": "/amazon.png"
+    },
+    {
+      "name": "Microsoft",
+      "logo": "/microsoft.png"
+    },
+    {
+      "name": "Rubrik",
+      "logo": "/rubrik.png"
+    },
+    {
+      "name": "Qualtrics",
+      "logo": "/qualtrics.png"
+    },
+    {
+      "name": "Epic",
+      "logo": "/epic.png"
+    },
+    {
+      "name": "Coinbase",
+      "logo": "/coinbase.png"
+    },
+    {
+      "name": "Visa",
+      "logo": "/visa.png"
+    },
+    {
+      "name": "Akuna Capital",
+      "logo": "/akuna-capital.png"
+    },
+    {
+      "name": "Five Rings",
+      "logo": "/five-rings.png"
+    },
+    {
+      "name": "Moelis & Company",
+      "logo": "/moelis.png"
+    },
+    {
+      "name": "Leerink Partners",
+      "logo": "/leerink-partners.png"
+    },
+    {
+      "name": "Capital Group",
+      "logo": "/capital-group.png"
+    },
+    {
+      "name": "General Motors",
+      "logo": "/general-motors.png"
+    },
+    {
+      "name": "Ford",
+      "logo": "/ford.png"
+    },
+    {
+      "name": "Stellantis",
+      "logo": "/stellantis.png"
+    },
+    {
+      "name": "Lockheed Martin",
+      "logo": "/lockheed-martin.png"
+    },
+    {
+      "name": "NASA JPL",
+      "logo": "/nasa-jpl.png"
+    },
+    {
+      "name": "Pratt & Whitney",
+      "logo": "/pratt-whitney.png"
+    },
+    {
+      "name": "Deloitte",
+      "logo": "/deloitte.png"
+    },
+    {
+      "name": "PwC",
+      "logo": "/pwc.png"
+    },
+    {
+      "name": "EY-Parthenon",
+      "logo": "/ey.png"
+    },
+    {
+      "name": "CDC",
+      "logo": "/cdc.png"
+    },
+    {
+      "name": "Federal Reserve",
+      "logo": "/federal-reserve.png"
+    },
+    {
+      "name": "Chicago Cubs",
+      "logo": "/chicago-cubs.png"
+    }
+  ]
+}

@@ -1,0 +1,181 @@
+{
+  "practice": {
+    "days": "Monday through Thursday",
+    "time": "9:30–11:30 PM",
+    "place": "Canham Natatorium"
+  },
+  "honors": {
+    "national": [
+      2003,
+      1998,
+      1996
+    ],
+    "bigTen": [
+      2025,
+      2024,
+      2022,
+      2018,
+      2017,
+      2016,
+      2015,
+      2012,
+      2011,
+      2004,
+      2003,
+      1998,
+      1997,
+      1996,
+      1992,
+      1991,
+      1989
+    ],
+    "bigTenRunnerUp": [
+      2023,
+      2021,
+      2014,
+      2010,
+      2009,
+      2008,
+      2006,
+      2005,
+      2002,
+      2001,
+      2000
+    ]
+  },
+  "links": [
+    {
+      "label": "Club Sports",
+      "url": "https://recsports.umich.edu/clubs"
+    },
+    {
+      "label": "CWPA",
+      "url": "https://collegiatewaterpolo.org/"
+    },
+    {
+      "label": "Maizepages",
+      "url": "https://maizepages.umich.edu/organization/menswaterpolo"
+    },
+    {
+      "label": "Photo Gallery",
+      "url": "https://drive.google.com/drive/u/1/folders/0ByBWCpbn60RoUUFtRW1JemQyNlE"
+    }
+  ],
+  "coaches": [
+    {
+      "role": "Head Coach",
+      "people": [
+        {
+          "name": "Adam Schnepf",
+          "headshot": "/headshotAdam.jpg"
+        }
+      ]
+    },
+    {
+      "role": "Assistant Coaches",
+      "people": [
+        {
+          "name": "Ivo Dinov",
+          "headshot": "/headshotIvo.jpg"
+        },
+        {
+          "name": "Ethan Knox"
+        }
+      ]
+    }
+  ],
+  "eboard": [
+    {
+      "role": "President",
+      "people": [
+        {
+          "name": "Ben Edlund"
+        }
+      ]
+    },
+    {
+      "role": "Vice President",
+      "people": [
+        {
+          "name": "Chase Richardson"
+        }
+      ]
+    },
+    {
+      "role": "Treasurer",
+      "people": [
+        {
+          "name": "William Dinkeloo"
+        }
+      ]
+    },
+    {
+      "role": "Captains",
+      "people": [
+        {
+          "name": "Chase Richardson"
+        },
+        {
+          "name": "Jack Staunton"
+        },
+        {
+          "name": "William Dinkeloo"
+        }
+      ]
+    },
+    {
+      "role": "Fundraising Chair",
+      "people": [
+        {
+          "name": "Matthew Morris"
+        }
+      ]
+    },
+    {
+      "role": "Travel Coordinator",
+      "people": [
+        {
+          "name": "Jack Staunton"
+        }
+      ]
+    },
+    {
+      "role": "Webmaster",
+      "people": [
+        {
+          "name": "Alex Huang"
+        }
+      ]
+    },
+    {
+      "role": "Alumni Relations Chair",
+      "people": [
+        {
+          "name": "Jack Humphries"
+        }
+      ]
+    },
+    {
+      "role": "Marketing Chair",
+      "people": [
+        {
+          "name": "Phillip Zhavoronkov"
+        }
+      ]
+    },
+    {
+      "role": "Social Chairs",
+      "people": [
+        {
+          "name": "Matthew Christianson"
+        },
+        {
+          "name": "Matthew Morris"
+        },
+        {
+          "name": "Yoel Bechar"
+        }
+      ]
+    }
+  ]
+}

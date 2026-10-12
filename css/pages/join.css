@@ -1,0 +1,21 @@
+/* Join page */
+
+.join-hero .wrap { padding-block: 80px 64px; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr)); gap: 40px; align-items: end; }
+.join-hero h1 { margin-top: 12px; font-size: clamp(60px, 9vw, 128px); line-height: 0.84; }
+.join-hero p { max-width: 540px; margin: 28px 0 0; font-size: 19px; line-height: 1.5; }
+.join-photo { margin: 0; aspect-ratio: 3 / 2; overflow: hidden; background: var(--gold); }
+.join-photo img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 40%; display: block; }
+.steps { padding-block: 80px; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); gap: 40px; }
+.step { border-top: 3px solid var(--navy); padding-top: 20px; }
+.step .n { font-family: var(--cond); font-weight: 800; font-size: 64px; line-height: 1; color: var(--gold); }
+.step h3 { margin: 12px 0 8px; font-family: var(--cond); font-weight: 700; font-size: 30px; color: var(--navy); text-transform: uppercase; }
+.step p { margin: 0; font-size: 17px; line-height: 1.55; color: var(--text); }
+.join-grid { padding-bottom: 96px; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 400px), 1fr)); gap: 48px; align-items: start; }
+.faq-list { margin-top: 16px; }
+.faq { border-top: 1px solid var(--rule); }
+.faq button {
+  width: 100%; background: none; border: 0; text-align: left; display: flex; justify-content: space-between; gap: 16px;
+  padding: 20px 0; font-family: var(--cond); font-weight: 700; font-size: 22px; color: var(--navy);
+}
+.faq button .sign { font-family: var(--mono); font-weight: 400; }
+.faq .a { margin: 0 0 20px; max-width: 560px; font-size: 17px; line-height: 1.55; color: var(--text); }

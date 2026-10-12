@@ -1,0 +1,15 @@
+/* News page */
+
+.news { padding-block: 16px 96px; }
+.news-year { display: grid; grid-template-columns: minmax(0, 180px) minmax(0, 1fr); gap: 16px 48px; padding-top: 28px; border-top: 3px solid var(--navy); margin-top: 48px; }
+.news-year:first-child { margin-top: 16px; }
+.news-year > h2 { margin: 0; font-family: var(--cond); font-weight: 800; font-size: 64px; line-height: 0.85; color: var(--navy); position: sticky; top: 100px; align-self: start; }
+.post { padding: 0 0 32px; margin: 0 0 32px; border-bottom: 1px solid var(--rule); max-width: 720px; }
+.post:last-child { border-bottom: 0; margin-bottom: 0; }
+.post .label { color: var(--olive); }
+.post h3 { margin: 10px 0 12px; font-family: var(--cond); font-weight: 700; font-size: 28px; line-height: 1.05; color: var(--navy); }
+.post .body p { margin: 0 0 12px; font-size: 16px; line-height: 1.55; color: var(--text); }
+@media (max-width: 720px) {
+  .news-year { grid-template-columns: 1fr; }
+  .news-year > h2 { position: static; font-size: 52px; }
+}

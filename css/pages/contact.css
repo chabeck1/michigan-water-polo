@@ -1,0 +1,14 @@
+/* Contact page */
+
+.contact-grid { padding-block: 24px 96px; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 400px), 1fr)); gap: 48px; align-items: start; }
+.c-list { display: flex; flex-direction: column; }
+.c-item { padding: 20px 0; border-top: 1px solid var(--rule); }
+.c-item > .label { color: var(--olive); }
+.c-item .v { margin-top: 6px; font-family: var(--cond); font-weight: 700; font-size: 26px; color: var(--navy); }
+.c-item .addr { font-size: 16px; }
+.c-item .c-sub { margin-top: 6px; font-size: 15px; line-height: 1.5; color: var(--muted); }
+.c-item .board-row:first-of-type { margin-top: 10px; }
+.social { display: flex; gap: 10px 20px; flex-wrap: wrap; margin-top: 6px; }
+.social a { font-family: var(--cond); font-weight: 700; font-size: 26px; }
+.links-row { display: flex; gap: 8px 20px; flex-wrap: wrap; margin-top: 8px; font-size: 16px; }
+.athlete-note { grid-column: 1 / -1; margin: 0 0 6px; padding: 12px 14px; background: var(--paper); border-left: 4px solid var(--maize); font-size: 15px; line-height: 1.5; color: var(--text); }

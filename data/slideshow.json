@@ -1,0 +1,20 @@
+{
+  "landscape": [
+    "/bigtenwin.jpg",
+    "/edlund.jpg",
+    "/huang1.jpg",
+    "/morris.jpg",
+    "/rossen.jpg",
+    "/hooray1.jpg",
+    "/willnchase.jpg"
+  ],
+  "portrait": [
+    "/edlundMobile.jpg",
+    "/bergenMobile.jpg",
+    "/chaseMobile.jpg",
+    "/willMobile.jpg",
+    "/potsosMobile.jpg",
+    "/rossenMobile.jpg",
+    "/ballMobile.jpg"
+  ]
+}

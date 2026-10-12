@@ -1,0 +1,533 @@
+# Pages CMS settings (https://pagescms.org/docs/configuration/).
+# Every key in a data file must be listed here: anything that isn't is deleted when someone saves.
+# Field order here is the key order Pages CMS writes, so keep it the same as in the data files.
+# Notes for editors go in field descriptions; Pages CMS doesn't show descriptions on content entries.
+
+media:
+  - name: roster
+    label: Roster photos
+    input: rosterPhotos
+    output: ""
+    rename: safe
+    extensions: [jpg, jpeg, png, webp]
+  - name: headshots
+    label: Coach photos
+    input: executiveHeadshots
+    output: ""
+    rename: safe
+    extensions: [jpg, jpeg, png, webp]
+  - name: banners
+    label: Slideshow photos
+    input: bannerPhotos
+    output: ""
+    rename: safe
+    extensions: [jpg, jpeg, png, webp]
+  - name: schools
+    label: School logos
+    input: schools
+    output: ""
+    rename: safe
+    extensions: [svg, png]
+  - name: companies
+    label: Company logos
+    input: companyLogos
+    output: ""
+    rename: safe
+    extensions: [png, svg, jpg, jpeg]
+
+settings:
+  commit:
+    identity: user
+
+content:
+  - name: schedule
+    label: Schedule & results
+    type: file
+    path: data/schedule.json
+    format: json
+    operations:
+      delete: false
+    fields:
+      - name: seasons
+        label: Seasons
+        description: One entry per year and team. Open a season, then a tournament, to add games and scores.
+        type: object
+        required: true
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{year} {team} team"
+        fields:
+          - name: year
+            label: Year
+            type: number
+            required: true
+            options:
+              min: 2000
+              max: 2100
+          - name: team
+            label: Team
+            type: select
+            required: true
+            description: Use A for a season with only one team.
+            options:
+              values: [A, B]
+          - name: tournaments
+            label: Tournaments
+            type: object
+            required: true
+            list:
+              collapsible:
+                collapsed: true
+                summary: "{name}"
+            fields:
+              - name: name
+                label: Tournament name
+                type: string
+                required: true
+                description: For a tournament both teams play, use the same name in the A and B seasons so it shows as one event.
+              - name: start
+                label: First day
+                type: date
+                default: ""
+              - name: end
+                label: Last day
+                type: date
+                default: ""
+              - name: location
+                label: Pool
+                type: string
+              - name: host
+                label: Hosted by
+                type: string
+                description: '"University of Michigan" marks it as a home event.'
+              - name: directions
+                label: Directions
+                type: string
+                description: A Google Maps link, or the pool's address.
+              - name: games
+                label: Games
+                type: object
+                list:
+                  collapsible:
+                    collapsed: true
+                    summary: "vs {opponent}"
+                fields:
+                  - name: opponent
+                    label: Opponent
+                    type: string
+                    required: true
+                    default: TBA
+                    description: Leave TBA if you don't know yet. To remove a game, use its delete button; a game with every box empty can't be saved.
+                  - name: time
+                    label: Start time
+                    type: date
+                    default: ""
+                    options:
+                      time: true
+                      format: "yyyy-MM-dd'T'HH:mm"
+                  - name: logo
+                    label: Opponent logo
+                    type: image
+                    options:
+                      media: schools
+                  - name: result
+                    label: Result
+                    type: select
+                    description: Leave empty until the game is played.
+                    options:
+                      values:
+                        - value: win
+                          label: Win
+                        - value: loss
+                          label: Loss
+                        - value: tie
+                          label: Tie
+                        - value: forfeit
+                          label: Forfeit
+                        - value: canceled
+                          label: Canceled
+                  - name: score
+                    label: Score
+                    type: string
+                    description: Michigan's score first, like 12-8 or 9-10 (OT).
+                  - name: watch
+                    label: Video link
+                    type: string
+                    pattern:
+                      regex: '^\s*(https?://\S+)?\s*$'
+                      message: Paste the full link, starting with https://
+
+  - name: roster
+    label: Roster
+    type: file
+    path: data/roster.json
+    format: json
+    operations:
+      delete: false
+    fields:
+      - name: seasons
+        label: Seasons
+        description: One entry per year. The site shows the newest season first.
+        type: object
+        required: true
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{year}"
+        fields:
+          - name: year
+            label: Year
+            type: number
+            required: true
+            options:
+              min: 2000
+              max: 2100
+          - name: photo
+            label: Team photo
+            type: image
+            options:
+              media: roster
+          - name: people
+            label: Players
+            type: object
+            required: true
+            list:
+              collapsible:
+                collapsed: true
+                summary: "{name}"
+            fields:
+              - name: name
+                label: Name
+                type: string
+                required: true
+              - name: class
+                label: Class
+                type: select
+                options:
+                  values:
+                    - value: FR
+                      label: Freshman
+                    - value: SO
+                      label: Sophomore
+                    - value: JR
+                      label: Junior
+                    - value: SR
+                      label: Senior
+                    - value: GS
+                      label: Grad student
+              - name: major
+                label: Major
+                type: string
+              - name: hometown
+                label: Hometown
+                type: string
+                description: Like Ann Arbor, MI
+              - name: headshot
+                label: Photo
+                type: image
+                options:
+                  media: roster
+              - name: captain
+                label: Captain
+                type: boolean
+
+  - name: news
+    label: News
+    type: file
+    path: data/news.json
+    format: json
+    operations:
+      delete: false
+    fields:
+      - name: news
+        label: Posts
+        description: New posts can go anywhere in the list; the site sorts them by date.
+        type: object
+        required: true
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{title}"
+        fields:
+          - name: title
+            label: Title
+            type: string
+            required: true
+          - name: date
+            label: Date
+            type: date
+            required: true
+            default: ""
+            options:
+              format: "MMMM do, yyyy"
+          - name: content
+            label: Text
+            type: text
+            description: Leave a blank line between paragraphs.
+
+  - name: banner
+    label: Announcement banner
+    type: file
+    path: data/banner.json
+    format: json
+    operations:
+      delete: false
+    fields:
+      - name: display
+        label: Show the banner
+        description: The bar across the top of every page.
+        type: boolean
+      - name: header
+        label: Headline
+        type: string
+      - name: subheader
+        label: Second line
+        type: string
+      - name: link
+        label: Link
+        type: string
+        description: A page name like schedule or news, or a full https:// address.
+      - name: expire
+        label: Hide after
+        type: date
+        default: ""
+        options:
+          time: true
+          format: "yyyy-MM-dd'T'HH:mm"
+
+  - name: slideshow
+    label: Home page photos
+    type: file
+    path: data/slideshow.json
+    format: json
+    operations:
+      delete: false
+    fields:
+      - name: landscape
+        label: Wide photos (computers)
+        description: Shown in this order.
+        type: image
+        options:
+          media: banners
+          multiple: true
+      - name: portrait
+        label: Tall photos (phones)
+        description: Shown in this order.
+        type: image
+        options:
+          media: banners
+          multiple: true
+
+  - name: awards
+    label: Awards
+    type: file
+    path: data/awards.json
+    format: json
+    operations:
+      delete: false
+    fields:
+      - name: seasons
+        label: Seasons
+        description: Shown on the schedule page under each season.
+        type: object
+        required: true
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{year}"
+        fields:
+          - name: year
+            label: Year
+            type: number
+            required: true
+            options:
+              min: 2000
+              max: 2100
+          - name: awards
+            label: Awards
+            type: object
+            required: true
+            list:
+              collapsible:
+                collapsed: true
+                summary: "{name}"
+            fields:
+              - name: name
+                label: Award
+                type: string
+                required: true
+              - name: recipients
+                label: Recipients
+                type: string
+                list: true
+
+  - name: about
+    label: Team info
+    type: file
+    path: data/about.json
+    format: json
+    operations:
+      delete: false
+    fields:
+      - name: practice
+        label: Practice
+        type: object
+        fields:
+          - name: days
+            label: Days
+            type: string
+            description: Like Monday through Thursday
+          - name: time
+            label: Time
+            type: string
+            description: Like 9:30–11:30 PM
+          - name: place
+            label: Pool
+            type: string
+      - name: honors
+        label: Championships
+        type: object
+        fields:
+          - name: national
+            label: National championship years
+            type: number
+            list: true
+          - name: bigTen
+            label: Big Ten championship years
+            type: number
+            list: true
+          - name: bigTenRunnerUp
+            label: Big Ten runner-up years
+            type: number
+            list: true
+      - name: links
+        label: Club links
+        description: Shown in the footer and on the contact page.
+        type: object
+        required: true
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{label}"
+        fields:
+          - name: label
+            label: Label
+            type: string
+            required: true
+          - name: url
+            label: Link
+            type: string
+            required: true
+            pattern:
+              regex: '^\s*(https?://\S+)?\s*$'
+              message: Paste the full link, starting with https://
+      - name: coaches
+        label: Coaches
+        type: object
+        required: true
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{role}"
+        fields:
+          - name: role
+            label: Role
+            type: string
+            required: true
+            description: Like Head Coach, or Assistant Coaches for several people.
+          - name: people
+            label: People
+            type: object
+            required: true
+            list: true
+            fields:
+              - name: name
+                label: Name
+                type: string
+                required: true
+              - name: headshot
+                label: Photo
+                type: image
+                options:
+                  media: headshots
+      - name: eboard
+        label: Exec board
+        description: The site shows each role with its people's names.
+        type: object
+        required: true
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{role}"
+        fields:
+          - name: role
+            label: Role
+            type: string
+            required: true
+            description: Like President, or Captains for several people.
+          - name: people
+            label: People
+            type: object
+            required: true
+            list: true
+            fields:
+              - name: name
+                label: Name
+                type: string
+                required: true
+
+  - name: fundraising
+    label: Support page letter
+    type: file
+    path: data/fundraising.json
+    format: json
+    operations:
+      delete: false
+    fields:
+      - name: giveUrl
+        label: Give link
+        type: string
+        description: Where every Give button goes.
+        pattern:
+          regex: '^\s*(https?://\S+)?\s*$'
+          message: Paste the full link, starting with https://
+      - name: message
+        label: Letter
+        type: rich-text
+        description: Text and links only. Pictures don't show on the site.
+        options:
+          format: html
+          media: false
+
+  - name: alumni
+    label: Alumni companies
+    type: file
+    path: data/alumni.json
+    format: json
+    operations:
+      delete: false
+    fields:
+      - name: count
+        label: Companies number
+        type: string
+        description: Shown at the top of the Alumni page, like 60+.
+      - name: companies
+        label: Companies
+        description: The scrolling list on the Alumni page, in this order.
+        type: object
+        required: true
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{name}"
+        fields:
+          - name: name
+            label: Company
+            type: string
+            required: true
+          - name: logo
+            label: Logo
+            type: image
+            options:
+              media: companies
