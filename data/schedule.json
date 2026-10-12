@@ -115,7 +115,9 @@
             {
               "opponent": "Wolverine",
               "time": "2026-10-10T11:30",
-              "logo": "/wolverine.svg"
+              "logo": "/wolverine.svg",
+              "result": "win",
+              "score": "10-8"
             },
             {
               "opponent": "Nashville",
